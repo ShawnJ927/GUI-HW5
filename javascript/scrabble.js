@@ -7,23 +7,24 @@
     Modified Assignment by Shawn Jordan
     updated by SJ on Dec 14, 2023 at 7:59 PM 
 */
+
 // create a global variable to hold the json data
 var tiles; 
 // create a global variable to hold the current word
 var boardLetters = [];
 // create global score variable
 var score = 0;
-
+// display the score
+$('#scoreboard-number').text(score);
+// get the json data
+$.getJSON('./json/pieces.json', function(data) {
+    // set the json data to the global variable
+    tiles = data.pieces;
+});
+// console log the information from tiles
+console.log(tiles);
 /* doc ready function for jquery */
 $(document).ready(function() {
-    
-    // display the score
-    $('#scoreboard-number').text(score);
-    // get the json data
-    $.getJSON('./json/pieces.json', function(data) {
-        // set the json data to the global variable
-        tiles = data.pieces;
-    });
 
     // function to create a new instance of the game
     // refreshes the board and the rack
