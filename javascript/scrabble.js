@@ -144,15 +144,14 @@ $(document).ready(function() {
         // get the image using selected letter
         var img = './images/Scrabble_Tile_' + letter + '.jpg';
         // create new draggable tile
-        var tile = $(`<div class="tile" id="${letter}" data-letter"=${letter}"><img src="${img}" width="57" height="55" alt="${letter}" position="absolute"></div>`);
-
+        var tile = $(`<div class="tile" id="${letter}"><img src="${img}" width="57" height="55" alt="${letter}" position="absolute"></div>`);
+        tile.data('letter', letter); // save the letter of the tile
         // make the tile draggable
         tile.draggable({
             revert: true, // revert to original position if not dropped in valid slot
             snap: '.cell-droppable', // snap to slot if dropped near it
             snapMode: 'inner', // snap to the inside of the slot
             snapTolerance: 15, // snap when within 30px of slot
-            letter: letter,// save the letter of the tile
         });
 
         // add it to the rack div
