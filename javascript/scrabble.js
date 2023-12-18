@@ -144,7 +144,7 @@ $(document).ready(function() {
         // get the image using selected letter
         var img = './images/Scrabble_Tile_' + letter + '.jpg';
         // create new draggable tile
-        var tile = $(`<div class="tile" id="${letter}" data-letter"${letter}"><img src="${img}" width="57" height="55" alt="${letter}" position="absolute"></div>`);
+        var tile = $(`<div class="tile" id="${letter}" data-letter"=${letter}"><img src="${img}" width="57" height="55" alt="${letter}" position="absolute"></div>`);
 
         // make the tile draggable
         tile.draggable({
