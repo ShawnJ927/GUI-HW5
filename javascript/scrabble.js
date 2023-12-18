@@ -8,8 +8,6 @@
     updated by SJ on Dec 14, 2023 at 7:59 PM 
 */
 
-// console log the information from tiles
-console.log(tiles);
 /* doc ready function for jquery */
 $(document).ready(function() {
     // create a global variable to hold the json data
@@ -27,6 +25,8 @@ $(document).ready(function() {
 
         // once the game tiles are loaded, start game
         newGame();
+        // console log the information from tiles
+        console.log(tiles);
     });
 
     // function to create a new instance of the game
