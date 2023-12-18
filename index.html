@@ -1,0 +1,89 @@
+<!--
+    File: index.html
+    GUI Assignment: HW5 Scrabble
+    Shawn Jordan, UMass Lowell Computer Science, shawn_jordan@student.uml.edu
+    Copyright (c) 2023 by Shawn. 
+    All rights reserved.
+    updated by SJ on Dec 14, 2023 at 2:59 PM
+
+    HELP USED: I used the pieces json provided in the graphics_data folder
+    which I'm not entirely sure if I need to credit that but since it 
+    stated it was created by some students I think I should credit those
+    students listed in the json file.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Scrabble Snippet</title>
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- container for the title -->
+        <div id="title">
+            <h1>Scrabble Snippet Game!</h1>
+        </div>
+        <!-- container for the scoreboard -->
+        <div id="scoreboard" class="header-text">
+            <h2>Score</h2>
+            <div id="scoreboard-number" class="header-text">
+            </div>
+        </div>
+
+        <!-- container for the game board -->
+        <div id="game-board" class="board-droppable">
+            <!-- table to hold the cells for the tiles -->
+            <table>
+                <tbody>
+                <!-- table row to hold all 15 slots on the game board -->
+                    <tr>
+                        <td id = "r0c0" class = "cell-droppable"></td>
+                        <td id = "r0c1" class = "cell-droppable"></td>
+                        <td id = "r0c2" class = "cell-droppable"></td>
+                        <td id = "r0c3" class = "cell-droppable"></td>
+                        <td id = "r0c4" class = "cell-droppable"></td>
+                        <td id = "r0c5" class = "cell-droppable"></td>
+                        <td id = "r0c6" class = "cell-droppable"></td>
+                        <td id = "r0c7" class = "cell-droppable"></td>
+                        <td id = "r0c8" class = "cell-droppable"></td>
+                        <td id = "r0c9" class = "cell-droppable"></td>
+                        <td id = "r0c10" class = "cell-droppable"></td>
+                        <td id = "r0c11" class = "cell-droppable"></td>
+                        <td id = "r0c12" class = "cell-droppable"></td>
+                        <td id = "r0c13" class = "cell-droppable"></td>
+                        <td id = "r0c14" class = "cell-droppable"></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <!-- container for the seven letter tile rack -->
+        <div id="tile-rack" class="tile-rack droppable">
+
+            <!-- tile container slots 1-7 of the tile rack -->
+            <div id="tile-rack-slots" class="tile-rack-slot droppable"></div>
+        </div>
+        <!-- container for the refresh and new game buttons -->
+        <div id="buttons">
+            <!-- refresh button -->
+            <button id="refresh-button" class="button">Refresh</button>
+            <!-- new game button -->
+            <button id="new-game-button" class="button">New Game</button>
+        </div>
+        <!-- name div to put my name -->
+        <div id="name">
+            <h3>By: Shawn Jordan</h3>
+        </div>
+        
+        <!-- jQuery from CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- jQuery UI plugin from CDN like above -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <!-- js script for all the game elements and logic-->
+        <script src="./javascript/scrabble.js"></script>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+/*
+    File: style.css
+    GUI Assignment: CSS HW5
+    Shawn Jordan, UMass Lowell Computer Science, shawn_jordan@student.uml.edu
+    Copyright (c) 2023 by Shawn. 
+    All rights reserved.
+    Modified Assignment by Shawn Jordan
+    updated by SJ on Dec 14, 2023 at 7:59 PM 
+*/
+#title{
+    /* align everything to center of screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title h1{
+    /* change font to roboto */
+    font-family: 'Roboto', sans-serif;
+    /* change color to lighter gray */
+    color: rgb(159, 133, 133);
+    /* change font size to 50px */
+    font-size: 50px;
+    /* change font weight to bold */
+    font-weight: bold;
+    
+}
+#scoreboard{
+    /* align everything to center of screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* put score and number in columns */
+    flex-direction: column;
+}
+/* places the table */
+table{
+    display: table;
+    position: relative;
+    margin: auto;
+}
+/* adjusts the table cell size */
+td.cell-droppable {
+    position: relative;
+    display: table-cell;
+    width : 51.5px;
+    height: 48px;
+    border: 3px solid #ffffff;
+}
+#scoreboard h2{
+    /* change font to roboto */
+    font-family: 'Roboto', sans-serif;
+    /* change color to lighter gray */
+    color: rgb(159, 133, 133);
+    /* change font size to 30px */
+    font-size: 30px;
+    /* change font weight to bold */
+    font-weight: bold;
+}
+#scoreboard-number{
+    /* change font to roboto */
+    font-family: 'Roboto', sans-serif;
+    /* change color to lighter gray */
+    color: rgb(159, 133, 133);
+    /* change font size to 30px */
+    font-size: 30px;
+    /* change font weight to bold */
+    font-weight: bold;
+}
+
+#game-board{
+    /* align everything to center of screen */
+    margin: auto;
+    /* create space between game board and score */
+    margin-top: 30px;
+    background-image: url("../images/Scrabble_Board_OneLine.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 900px;
+    width: 900px;
+}
+
+#tile-rack{
+    /* align everything to center of screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* create space between tile rack and game board */
+    margin-top: 100px;
+    background-image: url("../images/scrabble-tile-holder-406774_640.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#buttons{
+    /* align everything to center of screen */
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    /* create space between tile rack and buttons */
+    margin-top: 20px;
+}
+
+#buttons button{
+    /* create space between buttons */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* make the body dark mode in color to not blind the user */
+body{
+    background-color: #2b2222;
+}
+#tile{
+    /* resize the tile to fit on the tile rack and game board */
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+/* center name and change font to roboto*/
+#name{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: rgb(159, 133, 133);
+    /* put name at the bottom of the screen centered*/
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* make tile rack slots horizontal */
+#tile-rack-slots{
+    display: flex;
+    flex-direction: row;
+}
+
+#tile-rack-slots.tile{
+    /* resize the tile to fit on the tile rack and game board */
+    position: relative;
+}
