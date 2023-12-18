@@ -73,7 +73,7 @@ $(document).ready(function() {
             // get the letter of the tile dropped
             var letter = droppedTile.data('letter');
             // check to see if the tile was dropped in a valid slot
-            console.log('Item dropped:', letter);
+            console.log(letter);
             // get the index of the dropped cell
             var index = $(this).index();
             // update the boardLetters array with the letter and index
