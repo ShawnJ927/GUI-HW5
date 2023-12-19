@@ -29,8 +29,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* put score and number in columns */
-    flex-direction: column;
+    /* put score and number in rows */
+    flex-direction: row;
 }
 /* places the table */
 table{
@@ -44,7 +44,6 @@ td.cell-droppable {
     display: table-cell;
     width : 51.5px;
     height: 48px;
-    border: 3px solid #ffffff;
 }
 #scoreboard h2{
     /* change font to roboto */
@@ -66,7 +65,34 @@ td.cell-droppable {
     /* change font weight to bold */
     font-weight: bold;
 }
-
+#high-score-number{
+    /* change font to roboto */
+    font-family: 'Roboto', sans-serif;
+    /* change color to lighter gray */
+    color: rgb(159, 133, 133);
+    /* change font size to 30px */
+    font-size: 30px;
+    /* change font weight to bold */
+    font-weight: bold;
+}
+#score{
+    /* align everything to center of screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* put score and number in columns */
+    flex-direction: column;
+    margin-right: 10px;
+}
+#high-score{
+    /* align everything to center of screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* put score and number in columns */
+    flex-direction: column;
+    margin-left: 10px;
+}
 #game-board{
     /* align everything to center of screen */
     margin: auto;
