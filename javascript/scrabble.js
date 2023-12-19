@@ -55,6 +55,7 @@ $(document).ready(function() {
         cells.forEach(function(cell) {
             cell.innerHTML = '';
         });
+        boardLetters = Array.from({ length: 15 }, () => null); // reset board letters
     }
 
     // function to refresh the tile rack
