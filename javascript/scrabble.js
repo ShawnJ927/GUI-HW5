@@ -48,13 +48,6 @@ $(document).ready(function() {
         clearBoard();
         // refresh the rack
         refreshRack();
-        // reset the score
-        score = 0;
-        highscore = 0; // reset high score
-        // display score
-        $('#scoreboard-number').text(score);
-        // display high score
-        $('#high-score-number').text(highscore);
     }
     function clearBoard() {
         // clear the board by emptying each table cell
@@ -120,7 +113,7 @@ $(document).ready(function() {
             // send letter value to console for troubleshooting
             console.log('Letter value:', getValue(letter));
             var doubleWord = false; // bool to check for double word
-            
+            var doubleWord2 = false; // bool to check for double word
             // get boardletters values for calculating score
             for (var i = 0; i < boardLetters.length; i++){
                 // check to see if the value is null
@@ -142,10 +135,20 @@ $(document).ready(function() {
                         doubleWord = true;
                     }
                 }
+                if (i == 12){
+                    // check to see if bonus square
+                    if (boardLetters[i] != null){
+                        // set double word to true
+                        doubleWord2 = true;
+                    }
+                }
             }
 
             // if double word is true, double the score
             if (doubleWord){
+                score *= 2;
+            }
+            if (doubleWord2){
                 score *= 2;
             }
             
@@ -252,6 +255,13 @@ $(document).ready(function() {
     // create on-click methods to handle the two buttons
     // new game button click handling
     $('#new-game-button').click(function() {
+        // reset the score
+        score = 0;
+        highscore = 0; // reset high score
+        // display score
+        $('#scoreboard-number').text(score);
+        // display high score
+        $('#high-score-number').text(highscore);
         newGame();
     });
 
